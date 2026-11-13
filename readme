@@ -1,0 +1,301 @@
+# Networkwalks Cybersecurity Internship — Week 02
+
+# Footprinting, Reconnaissance & Network Scanning
+
+## 1. Project Overview
+
+This repository documents the practical activities completed during Week 02 of the Networkwalks Cybersecurity Internship.
+
+The focus of this week was on understanding Footprinting, Reconnaissance, and Network Scanning techniques used in cybersecurity to gather information about a target domain or network.
+
+These activities helped develop practical knowledge of information gathering, DNS enumeration, web technology identification, and network scanning.
+
+## 2. Learning Objectives
+
+The main objectives of this practical work were:
+
+- Understand the fundamentals of Footprinting and Reconnaissance.
+- Learn how to collect publicly available information about a domain.
+- Identify domain registration and DNS information.
+- Explore website technologies and server information.
+- Understand DNS enumeration techniques.
+- Perform network scanning to identify active hosts and open ports.
+- Analyze potential security risks.
+- Understand ethical and responsible security testing.
+
+## 3. Practical Modules & Tools Used
+
+The following tools were explored during the practical activities:
+
+| Tool | Purpose |
+|---|---|
+| WHOIS | Collect domain registration information |
+| NSLookup | Identify DNS records and IP addresses |
+| WhatWeb | Identify website technologies |
+| cURL | Retrieve HTTP response information |
+| WAFW00F | Detect Web Application Firewalls |
+| DNSRecon | Perform DNS enumeration |
+| Nmap | Discover hosts and scan network ports |
+| Zenmap | Graphical interface for Nmap |
+
+## 4. Environment & Documentation Stack
+
+**Operating System:** Kali Linux
+
+**Tools:** WHOIS, NSLookup, WhatWeb, cURL, WAFW00F, DNSRecon, Nmap, Zenmap
+
+**Documentation:** GitHub README, screenshots, and practical findings
+
+**Testing Environment:** Authorized lab environment and permitted targets only.
+
+## 5. Detailed Activities & Technical Findings
+
+### Module 01 — WHOIS Lookup
+
+**Objective:** Gather publicly available domain registration information.
+
+**Tool:** WHOIS
+
+**Activity:**
+- Performed a WHOIS lookup on the authorized target domain.
+- Reviewed domain registration information.
+- Examined registrar and domain-related details.
+
+**Command:**
+```bash
+whois example.com
+```
+
+**Key Findings:**
+- Domain: [Add domain]
+- Registrar: [Add result]
+- Registration Details: [Add result]
+- Name Servers: [Add result]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 02 — DNS Enumeration Using NSLookup
+
+**Objective:** Identify DNS information associated with the target domain.
+
+**Tool:** NSLookup
+
+**Activity:**
+- Queried the domain name.
+- Identified associated IP addresses.
+- Examined DNS responses.
+
+**Command:**
+```bash
+nslookup example.com
+```
+
+**Key Findings:**
+- Domain: [Add domain]
+- IP Address: [Add actual result]
+- DNS Information: [Add actual result]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 03 — Website Technology Detection
+
+**Objective:** Identify technologies and services used by the target website.
+
+**Tool:** WhatWeb
+
+**Activity:**
+- Scanned the authorized website.
+- Examined detected web technologies.
+- Reviewed available server and framework information.
+
+**Command:**
+```bash
+whatweb https://example.com
+```
+
+**Key Findings:**
+- Web Server: [Add result]
+- Technologies Detected: [Add result]
+- Additional Information: [Add result]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 04 — HTTP Information Gathering Using cURL
+
+**Objective:** Examine HTTP response information from the target website.
+
+**Tool:** cURL
+
+**Activity:**
+- Sent an HTTP request to the authorized website.
+- Reviewed HTTP response headers.
+- Observed the server response.
+
+**Command:**
+```bash
+curl -I https://example.com
+```
+
+**Key Findings:**
+- HTTP Status Code: [Add result]
+- Server Information: [Add result]
+- Response Headers: [Add result]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 05 — Web Application Firewall Detection
+
+**Objective:** Check whether a Web Application Firewall (WAF) is detected.
+
+**Tool:** WAFW00F
+
+**Activity:**
+- Tested the authorized target website.
+- Examined the tool's response.
+- Reviewed whether a WAF was identified.
+
+**Command:**
+```bash
+wafw00f https://example.com
+```
+
+**Key Findings:**
+- WAF Detection Status: [Add result]
+- Identified WAF: [Add result, if detected]
+- Additional Observations: [Add result]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 06 — DNSRecon Enumeration
+
+**Objective:** Perform DNS enumeration to collect available DNS-related information.
+
+**Tool:** DNSRecon
+
+**Activity:**
+- Performed DNS enumeration on the authorized domain.
+- Examined available DNS records.
+- Documented the returned information.
+
+**Command:**
+```bash
+dnsrecon -d example.com
+```
+
+**Key Findings:**
+- DNS Records: [Add actual results]
+- Name Servers: [Add actual results]
+- Additional Observations: [Add results]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 07 — Network Scanning Using Nmap
+
+**Objective:** Discover hosts and identify open ports and services within an authorized lab network.
+
+**Tool:** Nmap
+
+**Activity:**
+- Performed network discovery.
+- Scanned the authorized target.
+- Identified available ports and services.
+- Reviewed scan results.
+
+**Commands:**
+```bash
+nmap -sn <authorized-network>
+```
+
+```bash
+nmap -sV <authorized-target>
+```
+
+**Key Findings:**
+- Target: [Add authorized target]
+- Host Status: [Add result]
+- Open Ports: [Add actual results]
+- Services: [Add actual results]
+
+**Evidence:** Add the relevant screenshot here.
+
+### Module 08 — Network Scanning with Zenmap
+
+**Objective:** Explore graphical network scanning and understand scan results through Zenmap.
+
+**Tool:** Zenmap
+
+**Activity:**
+- Opened Zenmap in the lab environment.
+- Entered the authorized target.
+- Selected an appropriate scan profile.
+- Reviewed the graphical scan results.
+
+**Key Findings:**
+- Scan Profile: [Add result]
+- Host Information: [Add result]
+- Open Ports: [Add result]
+- Observations: [Add result]
+
+**Evidence:** Add the relevant screenshot here.
+
+## 6. Risk Analysis & Security Recommendations
+
+During footprinting and reconnaissance, publicly available information can reveal details about an organization's digital infrastructure.
+
+Potential security concerns include:
+
+1. **Domain Information Exposure:** Public registration information may reveal organizational details.
+2. **DNS Information Exposure:** DNS records may disclose infrastructure information.
+3. **Technology Disclosure:** Website technology information may help attackers identify potential weaknesses.
+4. **HTTP Header Exposure:** Response headers may disclose server-related information.
+5. **WAF Visibility:** Firewall detection can reveal information about website security controls.
+6. **Open Ports:** Unnecessary open ports may increase the attack surface.
+7. **Service Exposure:** Identifying running services can help security teams review outdated or insecure configurations.
+
+### Security Recommendations
+
+- Review publicly exposed domain and DNS information.
+- Keep website software and server components updated.
+- Disable unnecessary services and close unused ports.
+- Configure HTTP security headers appropriately.
+- Use a properly configured Web Application Firewall.
+- Monitor network activity and regularly review exposed services.
+- Conduct authorized security assessments.
+
+## 7. Final Project Report
+
+This practical work provided an introduction to Footprinting, Reconnaissance, and Network Scanning.
+
+The activities demonstrated how different cybersecurity tools can be used to collect domain information, examine DNS records, identify website technologies, inspect HTTP responses, detect WAFs, and scan authorized networks.
+
+Screenshots and practical findings should be included to document the activities and demonstrate the results.
+
+## 8. Scope & Ethical Compliance
+
+All practical activities must be performed only within authorized lab environments or on systems for which explicit permission has been granted.
+
+This repository is intended for educational purposes and cybersecurity skill development.
+
+No unauthorized scanning, exploitation, or access to third-party systems is intended.
+
+## 9. Acknowledgement
+
+I would like to acknowledge **Networkwalks** for providing the cybersecurity learning opportunity and practical training.
+
+Special thanks to the instructor and mentors for their guidance throughout the internship.
+
+## 10. Author Information
+
+**Name:** [Amina ali]
+
+**Program:** Networkwalks Cybersecurity Internship
+
+**Week:** Week 02
+
+**Topic:** Footprinting, Reconnaissance & Network Scanning
+
+**GitHub:** [Your GitHub Profile Link]
+
+---
+
+This repository is maintained for educational documentation and practical cybersecurity learning.
